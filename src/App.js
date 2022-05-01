@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Banner from './pages/Home/Banner/Banner';
+import Footer from './pages/Shareable/Footer/Footer';
 import Header from './pages/Shareable/Header/Header';
-import Footer from './pages/Shareable/Footer';
+
 
 function App() {
   return (
     <div className="App">
       <Header></Header>
-      <Footer></Footer>
+      <Banner></Banner>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
