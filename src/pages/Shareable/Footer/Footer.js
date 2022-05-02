@@ -8,7 +8,7 @@ const Footer = () => {
                 <i className="social-icon fa-brands fa-twitter-square"></i>
                 <i className="social-icon fa-brands fa-instagram-square"></i>
                 <i className="social-icon fa-solid fa-envelope"></i>
-                <p>© Copyright TinDog</p>
+                <p>© Copyright Warehouse</p>
 
             </div>
 
