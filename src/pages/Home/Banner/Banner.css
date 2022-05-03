@@ -1,18 +1,23 @@
 /* containers */
-  
+
 .container-fluid {
-    padding-left: 10% ;
-    padding-bottom: 10%;
-  }
+  padding-left: 8%;
+  padding-bottom: 8%;
+}
 
 #title {
-    text-align: left;
+  text-align: left;
+  padding-left: 9%;
 }
 
 .colored {
-    background-color: #ff4c68;
-    color: #fff;
-  }
+  background-color: #2d3436;
+  color: #fff;
+}
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
 
 /* Title Image */
 

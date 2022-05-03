@@ -1,6 +1,7 @@
 .items {
     padding-bottom: 3px;
     text-align: center;
+    position: relative;
 }
 
 .items img {

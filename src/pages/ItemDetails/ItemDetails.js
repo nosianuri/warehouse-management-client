@@ -11,9 +11,9 @@ const ItemDetails = () => {
             .then(data => setItemDetails(data));
     }, []);
     return (
-        <div className='container'>
+        <div className='container mb-5'>
             <div className='row'>
-                <h1 className='itemDetails-title mt-5'>Item List: {itemDetails.length}</h1>
+                <h1 className='itemDetails-title mt-5 mb-5'>OUR TOP PICKS</h1>
                 <div className='itemDetails-container'>
                     {
                         itemDetails.map(items => <Items

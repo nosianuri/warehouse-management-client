@@ -1,6 +1,6 @@
 import React from 'react';
 import './Testimonial.css';
-import images from '../../../images/images.png';
+import image from '../../../images/image.png';
 import nosia from '../../../images/nosia.png';
 import bizinsider from '../../../images/bizinsider.png';
 import mashable from '../../../images/mashable.png';
@@ -15,7 +15,7 @@ const Testimonial = () => {
                     <div className="carousel-inner">
                         <div className="carousel-item active container-fluid">
                             <h2 className="testimonial-text">The Phone Warehouse Limited was a mobile phone retailer based in Dhaka,  Bangladesh.</h2>
-                            <img className="testimonial-image" src={images} alt="logo-profile" />
+                            <img className="testimonial-image" src={image} alt="logo-profile" />
                             <em>IP Phone, BD</em>
                         </div>
                         <div className="carousel-item container-fluid">
