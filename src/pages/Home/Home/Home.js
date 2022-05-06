@@ -1,7 +1,7 @@
 import React from 'react';
-import ItemDetails from '../../ItemDetails/ItemDetails';
 import Banner from '../Banner/Banner';
 import Features from '../Features/Features';
+import HomeInventory from '../HomeInventory/HomeInventory';
 import Testimonial from '../Testimonial/Testimonial';
 
 
@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <>
             <Banner></Banner>
-            <ItemDetails></ItemDetails>
+            <HomeInventory></HomeInventory>
             <Testimonial></Testimonial>
             <Features></Features>
         </>

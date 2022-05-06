@@ -1,0 +1,9 @@
+.btn-style{
+    font-size: larger;
+    background-color: #2d3436;
+    color: #ccc;
+}
+
+.btn-style:hover{
+    background-color: #876531;
+}

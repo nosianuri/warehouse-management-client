@@ -5,7 +5,7 @@
 .itemDetails-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    gap: 45px;    
 }
 
 /* make services responsive */

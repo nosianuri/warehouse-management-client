@@ -1,11 +1,40 @@
 .items {
-    padding-bottom: 3px;
-    text-align: center;
     position: relative;
+    background-color: #ccc;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .items img {
     border-radius: 10px;
     height: 50%;
     width: 30%;
+}
+
+.items p{
+    margin: 0;
+}
+
+.btn-update {
+    width: 100%;
+    background: #3e494d;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-update .btn-set {
+    font-size: larger;
+    margin-right: 5px;
+}
+
+.btn-update:hover {
+    background-color: #876531;
 }

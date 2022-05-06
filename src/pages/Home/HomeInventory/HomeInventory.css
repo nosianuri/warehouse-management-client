@@ -1,0 +1,8 @@
+.btn-item{
+    font-size: larger;
+    background-color: #2d3436;
+    color: #ccc;
+}
+.btn-item:hover {
+    background-color: #876531;
+}
