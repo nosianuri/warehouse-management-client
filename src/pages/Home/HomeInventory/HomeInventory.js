@@ -6,9 +6,9 @@ import Items from '../Items/Items';
 import './HomeInventory.css';
 
 const HomeInventory = () => {
-    const [allItems, setAllItems] = useItems();
+    const [allItems, setAllItems] = useItems();        
     const [cart, setCart] = useState([]);
-    const navigate = useNavigate();
+    const navigate = useNavigate();       
 
     useEffect( () =>{
         const storedCart = getStoredCart();

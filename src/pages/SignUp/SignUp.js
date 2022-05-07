@@ -1,72 +1,66 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+
+import { async } from '@firebase/util';
+
+import './SignUp.css';
+import SocialLogin from '../SocialLogin.js/SocialLogin';
+import Loading from '../Shareable/Loading/Loading';
 import auth from '../../firebase.init';
 
 const SignUp = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [error, setError] = useState('');
+    const [agree, setAgree] = useState(false);
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const navigate = useNavigate();
-    
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
-
-    const handleEmailBlur = event =>{
-        setEmail(event.target.value);
+    const navigateLogin = () => {
+        navigate('/login');
     }
 
-    const handlePasswordBlur = event =>{
-        setPassword(event.target.value);
+    if(loading || updating){
+        return <Loading></Loading>
     }
 
-    const handleConfirmPasswordBlur = event =>{
-        setConfirmPassword(event.target.value);
+    if (user) {
+        console.log('user', user);
     }
 
-    if(user){
-        navigate('/myitem');
-    }
-
-    const handleCreateUser = event =>{
+    const handleSignUp = async (event) => {
         event.preventDefault();
-        if(password !== confirmPassword){
-            setError('Your password did not match')
-            return;
-        }
-        if(password.length < 6){
-            setError('Password must be 6 characters or longer')
-            return;
-        }
-
-        createUserWithEmailAndPassword(email, password);
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        // const agree = event.target.terms.checked;
+        
+         await createUserWithEmailAndPassword(email, password);
+       await updateProfile({displayName: name});
+       console.log('Updated profile');
+       navigate('/home');
     }
-    
     return (
-        <div className='form-container mt-5'>
-            <div>
-            <h2 className='form-title'>Sign Up</h2>
-                <form onSubmit={handleCreateUser}>                    
-                    <div className='input-group'>
-                        <label htmlFor="email">Email</label>
-                        <input onBlur={handleEmailBlur} type="email" name="email" id="" required/>
-                    </div>
-                    <div className='input-group'>
-                        <label htmlFor="password">Password</label>
-                        <input onBlur={handlePasswordBlur} type="password" name='password' id='' required />
-                    </div>
-                    <div className='input-group'>
-                        <label htmlFor="confirm-password">Confirm Password</label>
-                        <input onBlur={handleConfirmPasswordBlur } type="password" name='confirm-password' id="" required />
-                    </div>
-                    <p style={{color: 'red'}}>{error}</p>
-                    <input className='form-submit' type="submit" value="Sign Up" />
-                </form>
-                <p>
-                    Already Have an account? <Link className='form-link' to="/login">Login</Link>
-                </p>
-            </div>
+        <div className='signup-form'>
+            <h2 style={{ textAlign: 'center' }}>please signUp</h2>
+            <form onSubmit={handleSignUp}>
+                <input type="text" name="name" id="" placeholder='Your Name' />
+                <input type="email" name="email" id="" placeholder='Your Email' required />
+                <input type="password" name="password" id="" placeholder='Your Password' required />
+                <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept items provider Terms and Conditions</label>
+                <input
+                    disabled={!agree}
+                    className='w-50 mx-auto btn btn-dark mt-2'
+                    type="submit"
+                    value="signup" />
+            </form>
+            <p>Already have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

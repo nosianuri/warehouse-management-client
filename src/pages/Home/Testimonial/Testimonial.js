@@ -1,11 +1,11 @@
 import React from 'react';
-import './Testimonial.css';
 import image from '../../../images/image.png';
 import nosia from '../../../images/nosia.png';
 import bizinsider from '../../../images/bizinsider.png';
 import mashable from '../../../images/mashable.png';
 import techcrunch from '../../../images/TechCrunch.png';
 import tnw from '../../../images/tnw.png';
+import './Testimonial.css';
 
 const Testimonial = () => {
     return (
@@ -25,22 +25,19 @@ const Testimonial = () => {
                         </div>
 
                     </div>
-                    <a className="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+                    <a className="carousel-control-prev" href="/testimonial-carousel" role="button" data-slide="prev">
                         <span className="carousel-control-prev-icon"></span>
                     </a>
-                    <a className="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+                    <a className="carousel-control-next" href="/testimonial-carousel" role="button" data-slide="next">
                         <span className="carousel-control-next-icon"></span>
                     </a>
                 </div>
             </div>
             <div class="colored" id="press">
-
-
                 <img class="press-logo" src={techcrunch} alt="tc-logo" />
                 <img class="press-logo" src={tnw} alt="tnw-logo" />
                 <img class="press-logo" src={bizinsider} alt="biz-insider-logo" />
                 <img class="press-logo" src={mashable} alt="mashable-logo" />
-
             </div>
         </div>
     );

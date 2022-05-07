@@ -1,8 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Items.css';
 
 const Items = ({ items, handleAddToCart }) => {
-    const { name, image, price, description, quantity, supplier } = items;
+    const { id, name, image, price, description, quantity, supplier } = items;
+    const navigate = useNavigate();
+
+    const navigateToInventory = id =>{
+        navigate('/inventory/${id}')
+    }
+
     return (
         <div className='items-row'>
             
@@ -14,10 +21,13 @@ const Items = ({ items, handleAddToCart }) => {
                 <p>Description: <small>{description}</small></p>
                 <p>Supplier Name: <small>{supplier}</small></p>
 
+                <div className=''>
                 <button onClick={() => handleAddToCart(items)} className='btn-update'><span className='btn-set'>stock update</span>
                 </button>
-            
-
+                
+                
+                <button onClick={()=>navigateToInventory(id)} className="btn-update set"> <span className='btn-set '>Delivered</span></button>
+            </div>
         </div>
     );
 };

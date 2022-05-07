@@ -1,3 +1,12 @@
 .review-item-container{
     margin: 0 auto;
 }
+.btn-set{
+    font-size: larger;
+    color: #fff;
+    border: none;
+}
+
+.btn-set:hover{
+    background-color: #11999e;
+}

@@ -3,8 +3,9 @@ import React from 'react';
 const About = () => {
     return (
         <div>
+        <img src="https://i.ibb.co/M5fYJT7/huawei.png" alt="" />
             <h2>We are secret</h2>
-            <p>but you can know  about us</p>
+            <p>Please login for more information</p>
         </div>
     );
 };

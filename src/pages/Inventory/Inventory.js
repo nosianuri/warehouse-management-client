@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useItems from '../../hooks/useItems';
 import { addToData, getStoredCart } from '../../utilities/fakedb';
 import Items from '../Home/Items/Items';
 import './Inventory.css';
 
 const Inventory = () => {
+    const {inventoryId} = useParams();
     const [allItems, setAllItems] = useItems();
     const [cart, setCart] = useState([]);
     const navigate = useNavigate();
@@ -46,6 +47,7 @@ const Inventory = () => {
     }
     return (
         <div className='itemDetails-title'>
+        <h2>Welcome to detail: {inventoryId}</h2>
             <div className='container mb-5'>
                 <div className='row'>
 
