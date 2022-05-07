@@ -4,8 +4,8 @@
       "name": "Google Pixel 6 Pro",
       "price": 739.99,
       "quantity": 0,
-      "supplier": "Google",
-      "description": "Cloudy White, Sorta Sunny, Stormy Black.GLUOG, G8VOU.Available. Released 2021, October 28 ",
+      "supplier": "Hugh Grosvenor",
+      "description": "Cloudy White, Sorta Sunny, Stormy Black.GLUOG, G8VOU.6.71 inches, 110.5 cm2 (~88.8% screen-to-body ratio).128GB 12GB RAM, 256GB 12GB RAM, 512GB 12GB RAM. Available. Released 2021, October 28 .",
       "image": "https://i.ibb.co/YbfwjKn/google-pixel-6-pro.png"
     },
     {
@@ -13,8 +13,8 @@
         "name": "Apple iPhone 13 Pro",
       "price": 999.00,
       "quantity": 0,
-      "supplier": "Apple",
-      "description": "Face ID, accelerometer, gyro, proximity, compass, barometer Ultra Wideband (UWB) support.Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak)",
+      "supplier": "Matthew Mullenweg",
+      "description": "Face ID, accelerometer, gyro, proximity, compass, barometer Ultra Wideband (UWB) support.Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak).6.8 inches, 114.7 cm2 (~90.2% screen-to-body ratio).",
       "image": "https://i.ibb.co/f9Md9Tf/apple-iphone-13-pro.png"
       },
       {
@@ -22,8 +22,8 @@
         "name": "Samsung Galaxy S22 Ultra",
       "price": 999.99,
       "quantity": 0,
-      "supplier": "Samsung",
-      "description": "Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer.Dynamic AMOLED 2X, 120Hz, HDR10+, 1750 nits (peak) ",
+      "supplier": "Catherine Cook",
+      "description": "Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer.Dynamic AMOLED 2X, 120Hz, HDR10+, 1750 nits (peak).6.8 inches, 114.7 cm2 (~90.2% screen-to-body ratio) .",
       "image": "https://i.ibb.co/JdvZ8jf/samsung-galaxy-s22-ultra-5g.png"
       },
       {
@@ -31,8 +31,8 @@
         "name": "Oppo Find X5 Pro",
       "price": 969.68,
       "quantity": 0,
-      "supplier": "Oppo",
-      "description": "Oppo Find X5 Pro Dimensity model has no MariSilicon X image chip, 5-axis OIS and Hasselblad's color calibration.LTPO2 AMOLED, 1B colors, 120Hz, HDR10+, BT.2020, 500 nits (typ), 800 nits (HBM), 1300 nits (peak) ",
+      "supplier": "David Karp",
+      "description": "Oppo Find X5 Pro Dimensity model has no MariSilicon X image chip, 5-axis OIS and Hasselblad's color calibration.LTPO2 AMOLED, 1B colors, 120Hz, HDR10+, BT.2020, 500 nits (typ), 800 nits (HBM), 1300 nits (peak).",
       "image": "https://i.ibb.co/k9YwyY0/oppo-find-x5-pro.png"
       },
       {
@@ -40,8 +40,8 @@
         "name": "Apple iPhone 13",
       "price": 	728.99,
       "quantity": 0,
-      "supplier": "Apple",
-      "description": "Face ID, accelerometer, gyro, proximity, compass, barometer.Super Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak) ",
+      "supplier": "Varun Agarwal",
+      "description": "Face ID, accelerometer, gyro, proximity, compass, barometer.Super Retina XDR OLED, HDR10, Dolby Vision, 800 nits (HBM), 1200 nits (peak).Scratch-resistant ceramic glass, oleophobic coating, Wide color gamut. ",
       "image": "https://i.ibb.co/dt2qB2w/apple-iphone-13.png"
       },
       {
@@ -49,8 +49,8 @@
         "name": "OnePlus 10 Pro",
       "price": 	746.41,
       "quantity": 0,
-      "supplier": "OnePlus",
-      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum, barometer.LTPO2 Fluid AMOLED, 1B colors, 120Hz, HDR10+, 500 nits (typ), 800 nits (HBM), 1300 nits (peak) ",
+      "supplier": "Jack Ma",
+      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum, barometer.LTPO2 Fluid AMOLED, 1B colors, 120Hz, HDR10+, 500 nits (typ), 800 nits (HBM), 1300 nits (peak) .",
       "image": "https://i.ibb.co/F3sSX6X/oneplus-10-pro.png"
       },
       {
@@ -58,8 +58,8 @@
         "name": "Xiaomi 12 Pro",
       "price": 	898.94,
       "quantity": 0,
-      "supplier": "Xiaomi",
-      "description": "Fingerprint (under display, optical), accelerometer, gyro, compass, barometer, color spectrum.LTPO AMOLED, 1B colors, 120Hz, Dolby Vision, HDR10+, 1000 nits (HBM), 1500 nits (peak) ",
+      "supplier": "Masayoshi Son",
+      "description": "Fingerprint (under display, optical), accelerometer, gyro, compass, barometer, color spectrum.LTPO AMOLED, 1B colors, 120Hz, Dolby Vision, HDR10+, 1000 nits (HBM), 1500 nits (peak).Available. Released 2021, December 31. ",
       "image": "https://i.ibb.co/n8Gb5PH/xiaomi-12-pro.png"
       },
       {
@@ -67,8 +67,8 @@
         "name": "Apple iPhone 13 Pro Max",
       "price": 1099.00,
       "quantity": 0,
-      "supplier": "Apple",
-      "description": "Face ID, accelerometer, gyro, proximity, compass, barometer.Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak) ",
+      "supplier": "Richard Branson",
+      "description": "Face ID, accelerometer, gyro, proximity, compass, barometer.Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, 1000 nits (HBM), 1200 nits (peak).Glass front (Gorilla Glass), glass back (Gorilla Glass), stainless steel frame. ",
       "image": "https://i.ibb.co/Kw3vkzm/apple-iphone-13-pro-max.png"
       },
       {
@@ -76,8 +76,8 @@
         "name": "vivo iQOO 9 Pro",
       "price": 	768.99,
       "quantity": 0,
-      "supplier": "vivo",
-      "description": "Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass.LTPO2 AMOLED, 1B colors, 120Hz, HDR10+, 500 nits (typ), 1000 nits (HBM), 1500 nits (peak) ",
+      "supplier": "Mukesh Ambani",
+      "description": "Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass.LTPO2 AMOLED, 1B colors, 120Hz, HDR10+, 500 nits (typ), 1000 nits (HBM), 1500 nits (peak).256GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM. ",
       "image": "https://i.ibb.co/m6dh6rM/vivo-iqoo-9-pro-global.png"
       },
       {
@@ -85,8 +85,8 @@
         "name": "Asus ROG Phone 5 Ultimate",
       "price": 1300,
       "quantity": 0,
-      "supplier": "Asus ROG",
-      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass.AMOLED, 1B colors, 144Hz, HDR10+, 800 nits (typ), 1200 nits (peak) ",
+      "supplier": "Jeffrey Bezos",
+      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass.AMOLED, 1B colors, 144Hz, HDR10+, 800 nits (typ), 1200 nits (peak).Memory space 512GB 18GB RAM.6.78 inches, 109.5 cm2 (~82.0% screen-to-body ratio). ",
       "image": "https://i.ibb.co/FqFCq3p/asus-rog-phone-5-ultimate.png"
       },
       {
@@ -94,8 +94,8 @@
         "name": "vivo X70 Pro+",
       "price": 	902.86,
       "quantity": 0,
-      "supplier": "vivo",
-      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum.LTPO AMOLED, 1B colors, 120Hz, HDR10+, 500 nits (typ), 1000 nits (HBM), 1500 nits (peak) ",
+      "supplier": "Warren Buffett",
+      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum.LTPO AMOLED, 1B colors, 120Hz, HDR10+, 500 nits (typ), 1000 nits (HBM), 1500 nits (peak). Inner Memory 256GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM. ",
       "image": "https://i.ibb.co/nmkS6fn/vivo-x70-pro-plus.png"
       },
       {
@@ -103,8 +103,8 @@
         "name": "Samsung Galaxy Z Fold3 5G",
       "price": 1499.00,
       "quantity": 0,
-      "supplier": "Samsung",
-      "description": "Fingerprint (side-mounted), accelerometer, gyro, proximity, compass, barometer Bixby natural language commands and dictation.Foldable Dynamic AMOLED 2X, 120Hz, HDR10+, 1200 nits (peak) ",
+      "supplier": "Gautam Adani",
+      "description": "Fingerprint (side-mounted), accelerometer, gyro, proximity, compass, barometer Bixby natural language commands and dictation.Foldable Dynamic AMOLED 2X, 120Hz, HDR10+, 1200 nits (peak).256GB 12GB RAM, 512GB 12GB RAM. ",
       "image": "https://i.ibb.co/x7qJBx9/samsung-galaxy-z-fold3-5g.png"
       },
       {
@@ -112,8 +112,8 @@
         "name": "OnePlus 9 Pro",
       "price": 	649.58,
       "quantity": 0,
-      "supplier": "OnePlus",
-      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum.LTPO Fluid2 AMOLED, 1B colors, 120Hz, HDR10+, 1300 nits (peak) ",
+      "supplier": "Musa Bin Shamser",
+      "description": "Fingerprint (under display, optical), accelerometer, gyro, proximity, compass, color spectrum.LTPO Fluid2 AMOLED, 1B colors, 120Hz, HDR10+, 1300 nits (peak).128GB 8GB RAM, 256GB 8GB RAM, 256GB 12GB RAM. ",
       "image": "https://i.ibb.co/LpFj3KS/oneplus-9-pro.png"
       },
       {
@@ -121,8 +121,8 @@
         "name": "Samsung Galaxy S21 Ultra 5G",
       "price": 739.00,
       "quantity": 0,
-      "supplier": "Samsung",
-      "description": "Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer.Dynamic AMOLED 2X, 120Hz, HDR10+, 1500 nits (peak) ",
+      "supplier": "Giasuddin Mamun",
+      "description": "Fingerprint (under display, ultrasonic), accelerometer, gyro, proximity, compass, barometer.Dynamic AMOLED 2X, 120Hz, HDR10+, 1500 nits (peak).128GB 12GB RAM, 256GB 12GB RAM, 512GB 12GB RAM, 512GB 16GB RAM. ",
       "image": "https://i.ibb.co/h8F3nMn/samsung-galaxy-s21-ultra-5g.png"
       },
       
@@ -131,8 +131,8 @@
         "name": "Samsung Galaxy A51",
       "price": 200.44,
       "quantity": 0,
-      "supplier": "Samsung",
-      "description": "Fingerprint (under display, optical), accelerometer, gyro, compass, Virtual proximity sensing.Super AMOLED ",
+      "supplier": "Salman F. Rahman",
+      "description": "Fingerprint (under display, optical), accelerometer, gyro, compass, Virtual proximity sensing.Super AMOLED.Android 10, upgradable to Android 11, One UI 3.1.64GB 4GB RAM, 128GB 4GB RAM, 128GB 6GB RAM, 128GB 8GB RAM, 256GB 8GB RAM. ",
       "image": "https://i.ibb.co/Y2c8vNF/samsung-galaxy-a51-sm-a515.png"
       }
       
