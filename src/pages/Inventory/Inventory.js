@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useItems from '../../hooks/useItems';
 import { addToData, getStoredCart } from '../../utilities/fakedb';
 import Items from '../Home/Items/Items';
@@ -7,6 +8,7 @@ import './Inventory.css';
 const Inventory = () => {
     const [allItems, setAllItems] = useItems();
     const [cart, setCart] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const storedCart = getStoredCart();
@@ -58,7 +60,7 @@ const Inventory = () => {
                     </div>
                 </div>
             </div>
-            <button className='mt-5 rounded btn-style'>add new item</button>
+            <button onClick={()=>navigate('/additem')} className='mt-5 rounded btn-style'>add new item</button>
         </div>
     );
 };
