@@ -46,7 +46,7 @@ const HomeInventory = () => {
     }
     return (
         <div>
-            <h1 className='itemDetails-title mt-5'>OUR TOP PICKS</h1>
+            <h1 className='itemDetails-title mt-5'>OUR TOP PICKS: {cart.length}</h1>
             <div className='container mb-3'>
                 <div className='row'>
 
