@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import image from '../../../images/image.png';
 import nosia from '../../../images/nosia.png';
 import bizinsider from '../../../images/bizinsider.png';
@@ -6,33 +6,38 @@ import mashable from '../../../images/mashable.png';
 import techcrunch from '../../../images/TechCrunch.png';
 import tnw from '../../../images/tnw.png';
 import './Testimonial.css';
+import { Carousel } from 'react-bootstrap';
 
 const Testimonial = () => {
-    return (
-        <div>
-            <div className="colored" id="testimonials">
-                <div id="testimonial-carousel" className="carousel slide" data-bs-ride="carousel">
-                    <div className="carousel-inner">
-                        <div className="carousel-item active container-fluid">
-                            <h2 className="testimonial-text">The Phone Warehouse Limited was a mobile phone retailer based in Dhaka,  Bangladesh.</h2>
-                            <img className="testimonial-image" src={image} alt="logo-profile" />
-                            <em>IP Phone, BD</em>
-                        </div>
-                        <div className="carousel-item container-fluid">
-                            <h2 className="testimonial-text"> In August 2022 the company became a subsidiary of Currys plc, which was formed by the founder Nosia</h2>
-                            <img className="testimonial-image" src={nosia} alt="lady-profile" />
-                            <em>Nosia, Dhaka</em>
-                        </div>
+    const [index, setIndex] = useState(0);
 
-                    </div>
-                    <a className="carousel-control-prev" href="/testimonial-carousel" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon"></span>
-                    </a>
-                    <a className="carousel-control-next" href="/testimonial-carousel" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon"></span>
-                    </a>
-                </div>
-            </div>
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+
+    return (
+        <div className="colored mt-5" id="testimonials">
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item className='mt-5'>
+      <h2 className="testimonial-text">The Phone Warehouse Limited was a mobile phone retailer based in Dhaka,  Bangladesh.</h2>
+        <img
+          className="testimonial-image" src={image} alt="logo-profile"
+        />
+        <em>IP Phone, BD</em>
+        
+      </Carousel.Item>
+      <Carousel.Item className='mt-5'>
+      <h2 className="testimonial-text"> In August 2022 the company became a subsidiary of Currys plc, which was formed by the founder Nosia</h2>
+        <img
+         className="testimonial-image" src={nosia} alt="lady-profile"
+        />
+        <em>Nosia, Dhaka</em>
+        
+      </Carousel.Item>
+      
+    </Carousel>
+  
+
             <div class="colored" id="press">
                 <img class="press-logo" src={techcrunch} alt="tc-logo" />
                 <img class="press-logo" src={tnw} alt="tnw-logo" />

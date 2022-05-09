@@ -7,10 +7,13 @@ const addToData = id => {
         updateCart = JSON.parse(storedCart);
     }
 
-    // add quantity
+    //Add quantity
+
+
+    // Less quantity
     const quantity = updateCart[id];
     if (quantity) {
-        const newQuantity = quantity + 1;
+        const newQuantity = quantity - 1;
         updateCart[id] = newQuantity;
     }
     else {

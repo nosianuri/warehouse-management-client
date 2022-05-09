@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Items.css';
 
-const Items = ({ items, handleAddToCart }) => {
-    const { id, name, image, price, description, quantity, supplier } = items;
+const Items = ({ items, handleLessToQuantity, handleAddToQuantity }) => {
+    const { _id, name, image, price, description, quantity, supplier } = items;    
     const navigate = useNavigate();
 
     const navigateToInventory = id =>{
-        navigate('/inventory/${id}')
+        navigate(`/inventory/${id}`);
     }
+
+    
 
     return (
         <div className='items-row'>
@@ -22,11 +24,12 @@ const Items = ({ items, handleAddToCart }) => {
                 <p>Supplier Name: <small>{supplier}</small></p>
 
                 <div className=''>
-                <button onClick={() => handleAddToCart(items)} className='btn-update'><span className='btn-set'>stock update</span>
+                <button onClick={() => handleLessToQuantity(items)} className='btn-update'><span className='btn-set'>Delivered</span>
                 </button>
                 
+                <input type="text" onChange={handleAddToQuantity} />
                 
-                <button onClick={()=>navigateToInventory(id)} className="btn-update set"> <span className='btn-set '>Delivered</span></button>
+                <button onClick={()=>navigateToInventory(_id)} className="btn-update set"> <span className='btn-set '>stock</span></button>
             </div>
         </div>
     );

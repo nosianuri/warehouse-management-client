@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useCart from '../../hooks/useCart';
 import useItems from '../../hooks/useItems';
 import { removeFromDb } from '../../utilities/fakedb';
-import Cart from '../Cart/Cart';
+
 import Review from '../Review/Review';
 import './MyItem.css';
 
@@ -13,24 +13,26 @@ const MyItem = () => {
     const navigate = useNavigate();
 
     const handleRemoveItem = item =>{
-        const rest = cart.filter(selectItem => selectItem.id !== item.id);
+        const rest = cart.filter(selectItem => selectItem._id !== item._id);
         setCart(rest);
-        removeFromDb(item.id);
+        removeFromDb(item._id);
     }
     return (
-        <div className='myitem-container'>
-            <div className='review-item-container'>
+        <div className='myitem-container w-50 mx-auto'>
+            <div className='review-item-container mb-5'>
                 {
                     cart.map(item => <Review
-                    key={item.id}
+                    key={item._id}
                     item ={item}
                     handleRemoveItem = {handleRemoveItem}
                     ></Review>)
                 }
             </div>
-            <button onClick={()=>navigate('/manageinfo')} className='mt-5 rounded btn-set'>Manage Info</button>
-            <div className='cart-container'>
-                <Cart cart={cart}></Cart>
+            
+            <div>
+                <Link to="/manageitem">
+                    <button onClick={()=>navigate('/manageitem')}  className='btn btn-set'>Manage Item</button>
+                </Link>
             </div>
         </div>
     );

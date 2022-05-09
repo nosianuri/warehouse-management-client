@@ -3,7 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
-import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Shareable/Loading/Loading';
 import auth from '../../firebase.init';
@@ -38,12 +39,15 @@ const Login = () => {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
         }
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
     const navigateSignUp = event => {
@@ -83,7 +87,7 @@ const Login = () => {
             <p>New Viewer? <Link to="/signup" className='text-danger pe-auto text-decoration-none' onClick={navigateSignUp}>Please SignUp</Link></p>
             <p>Forget Password? <button className='btn btn-link text-danger pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
-            <ToastContainer />
+            
         </div>
     );
 };

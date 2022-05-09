@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 const useItems = () =>{
     const [allItems, setAllItems] = useState([]);
+    
     useEffect( () =>{
-        fetch('items.json')
+        fetch('http://localhost:5000/items')
         .then(res=> res.json())
         .then(data => setAllItems(data));
     }, []);
