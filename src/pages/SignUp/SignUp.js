@@ -8,6 +8,7 @@ import './SignUp.css';
 import SocialLogin from '../SocialLogin.js/SocialLogin';
 import Loading from '../Shareable/Loading/Loading';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
     const [agree, setAgree] = useState(false);
@@ -18,6 +19,7 @@ const SignUp = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [token] = useToken(user);
     const navigate = useNavigate();
 
     const navigateLogin = () => {
@@ -28,8 +30,8 @@ const SignUp = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        console.log('user', user);
+    if (token) {
+        navigate('/home');
     }
 
     const handleSignUp = async (event) => {

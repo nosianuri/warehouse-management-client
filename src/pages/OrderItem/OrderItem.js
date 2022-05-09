@@ -13,8 +13,8 @@ const OrderItem = () => {
     useEffect(() => {
 
         const confirmOrders = async () => {
-            const email = user.email;
-            const url = `http://localhost:5000/manage?email=${email}`;
+            const email = user?.email;
+            const url = `https://polar-shelf-26045.herokuapp.com/manage?email=${email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
 
@@ -33,6 +33,7 @@ const OrderItem = () => {
     return (
         <div>
             <h2>your order item:{orderItem.length}</h2>
+            <p>{orderItem.email} : {orderItem.server}</p>
         </div>
     );
 };

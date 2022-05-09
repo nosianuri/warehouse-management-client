@@ -9,7 +9,7 @@ import Home from './pages/Home/Home/Home';
 import Inventory from './pages/Inventory/Inventory';
 import ItemDetail from './pages/ItemDetail/ItemDetail';
 import Login from './pages/Login/Login';
-import ManageInfo from './pages/ManageInfo/ManageInfo';
+
 import ManageItems from './pages/ManageItems/ManageItems';
 import MyItem from './pages/MyItem/MyItem';
 import NotFound from './pages/NotFound/NotFound';
@@ -47,7 +47,7 @@ function App() {
           </RequireAuth>
         }></Route>
 
-        <Route path='/manageinfo' element={<ManageInfo></ManageInfo>}></Route>
+        
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>

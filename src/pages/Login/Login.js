@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Shareable/Loading/Loading';
 import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin.js/SocialLogin';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -26,18 +27,18 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-
-    if(loading || sending){
+    const [token] = useToken(user);
+    if (loading || sending) {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
-        }
+    }
 
     const handleSubmit = async event => {
         event.preventDefault();
@@ -45,22 +46,21 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        const {data} = await axios.post('http://localhost:5000/login', {email});
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
+        
+       
     }
 
     const navigateSignUp = event => {
         navigate('/register');
     }
 
-    const resetPassword = async() =>{
+    const resetPassword = async () => {
         const email = emailRef.current.value;
-        if (email){
+        if (email) {
             await sendPasswordResetEmail(email);
-          toast('Sent email');
+            toast('Sent email');
         }
-        else{
+        else {
             toast('please enter your email address');
         }
     }
@@ -78,7 +78,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                
+
                 <Button variant="dark w-50 mx-auto d-block mb-2" type="submit">
                     Login
                 </Button>
@@ -87,7 +87,7 @@ const Login = () => {
             <p>New Viewer? <Link to="/signup" className='text-danger pe-auto text-decoration-none' onClick={navigateSignUp}>Please SignUp</Link></p>
             <p>Forget Password? <button className='btn btn-link text-danger pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
-            
+
         </div>
     );
 };

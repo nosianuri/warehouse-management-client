@@ -57,7 +57,7 @@ const HomeInventory = () => {
         let newCart = [];
         const exists = cart.find(item => item._id === selectedItem._id);
         if (!exists){
-            selectedItem.quantity = 1;
+            selectedItem.quantity = 0;
             newCart = [...cart, selectedItem];
             
         }
